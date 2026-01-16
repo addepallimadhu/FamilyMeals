@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>FamilyMeals - demo (Flask)</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; }
+    input, select, textarea { padding: 6px; font-size: 14px; width: 100%; box-sizing: border-box; margin-bottom: 8px; }
+    label { font-weight: bold; display:block; margin-top:12px; }
+    button { padding: 8px 12px; font-size: 14px; }
+    .row { display:flex; gap:12px; }
+    .col { flex:1; }
+    pre { background:#f6f6f6; padding:10px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <h1>FamilyMeals — Demo UI (Python/Flask)</h1>
+  <div>
+    <h2>Predefined users</h2>
+    <ul id="users"></ul>
+  </div>
+
+  <div>
+    <h2>Create booking</h2>
+    <label>Organizer phone (one of predefined):</label>
+    <input id="organizer" placeholder="+15550000001" />
+    <label>Participants phones (comma separated; will be validated to be predefined):</label>
+    <input id="participants" placeholder="+15550000002, +15550000003" />
+    <div class="row">
+      <div class="col">
+        <label>Start (ISO datetime):</label>
+        <input id="start" placeholder="2026-02-14T08:00:00Z" />
+      </div>
+      <div class="col">
+        <label>End (ISO datetime):</label>
+        <input id="end" placeholder="2026-02-14T09:00:00Z" />
+      </div>
+    </div>
+    <label>Note</label>
+    <input id="note" />
+    <button id="create">Create booking</button>
+    <div id="createResult"></div>
+  </div>
+
+  <div>
+    <h2>List bookings (optionally by phone)</h2>
+    <input id="listPhone" placeholder="+15550000001" />
+    <button id="list">List</button>
+    <pre id="bookingsOut">No bookings yet.</pre>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "noShowThreshold": 7,
+  "bookingAdvanceHours": 24,
+  "maxBookingDurationDays": 366
+}
